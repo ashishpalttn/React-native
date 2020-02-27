@@ -73,7 +73,7 @@ class Home2 extends React.Component {
           }}>
               <Image
             source={require('./imag.png')}
-            style={{marginLeft:70,marginTop:20, marginRight:'5%',width: 300, height: 400}}
+            style={{marginLeft:0,marginTop:0,width: '100%', height: 300, resizeMode: 'contain'}}
           />
           {/* <Text style={{fontSize: 20, flex: 1, marginTop: 15, marginLeft: 15}}>
             Unlimited Data

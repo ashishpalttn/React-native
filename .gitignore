@@ -58,6 +58,8 @@ buck-out/
 # CocoaPods
 /ios/Pods/
 
-
+Home.js
+Home2.js
+Home3.js
 Test.js
 Test2.js

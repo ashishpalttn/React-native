@@ -139,30 +139,3 @@ const styles = StyleSheet.create({
 });
 
 export default Home;
-
-
-// import {View, StyleSheet, Text, Image} from 'react-native';
-// import React from 'react';
-// // import Icon from 'react-native-vector-icons/MaterialIcons';
-
-// class Home3 extends React.Component {
-//   render() {
-//     return (
-//       <View style={styles.parent}>
-//         <Text style={styles.text}>Hello Navigation 2.........</Text>
-//       </View>
-//     );
-//   }
-// }
-// const styles = StyleSheet.create({
-//   parent: {
-//     backgroundColor: 'white',
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//   },
-//   text: {
-//     fontSize: 30,
-//   },
-// });
-// export default Home3;

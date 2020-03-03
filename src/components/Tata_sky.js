@@ -26,7 +26,7 @@ class Test extends React.Component {
             <Text style={[styles.r999]}>₹999</Text>
             <View style={styles.line} />
             <View style={styles.botton}>
-                <TouchableOpacity onPress={()=>{navigation.navigate('third')}}>
+                <TouchableOpacity onPress={()=>{navigation.navigate('Touch_image')}}>
               <Text style={styles.proceed}>Proceed to Payment</Text>
               </TouchableOpacity>
             </View>
@@ -155,35 +155,3 @@ const styles = StyleSheet.create({
   },
 });
 export default Test;
-
-// import {View, StyleSheet, Text, Image, SafeAreaView} from 'react-native';
-// import React from 'react';
-// import {TouchableOpacity} from 'react-native-gesture-handler';
-
-// class Home1 extends React.Component {
-//   render() {
-//     const {navigation} = this.props;
-//     return (
-//       <SafeAreaView style={styles.parent}>
-//         <TouchableOpacity
-//           onPress={() => {
-//             navigation.navigate('third');
-//           }}>
-//           <Text style={styles.text}>Hello navigation </Text>
-//         </TouchableOpacity>
-//       </SafeAreaView>
-//     );
-//   }
-// }
-// const styles = StyleSheet.create({
-//   parent: {
-//     backgroundColor: 'white',
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//   },
-//   text: {
-//     fontSize: 30,
-//   },
-// });
-// export default Home1;

@@ -37,6 +37,7 @@ class Home extends React.Component {
     }
   };
   render() {
+    
     return (
       <SafeAreaView style={[styles.container]}>
         <View

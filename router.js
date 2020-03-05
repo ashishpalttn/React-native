@@ -1,6 +1,8 @@
 import Home from './src/components/Home';
 import Tata_sky from './src/components/Tata_sky';
 import Touch_image from './src/components/Touch_image';
+import profiles from './src/components/profiles';
+import profile_detail from './src/components/profile_detail';
 import * as React from 'react';
 import {NavigationContainer, StackActions} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -18,6 +20,7 @@ const MyStack = () => {
           headerStyle: {
             backgroundColor: '#2a5724',
           },
+
           headerTintColor: '#fff',
           headerRight: () => (
             <Button
@@ -57,7 +60,45 @@ const MyStack = () => {
           headerTintColor: '#fff',
           headerRight: () => (
             <Button
-              onPress={() => alert('This is Third Page!')}
+              onPress={() => alert('This is third!')}
+              title="Info"
+              color="#fff"
+            />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="profile"
+        component={profiles}
+        options={{
+          title: 'My home',
+          headerStyle: {
+            backgroundColor: '#2a5724',
+          },
+
+          headerTintColor: '#fff',
+          headerRight: () => (
+            <Button
+              onPress={() => alert('This is First Page !')}
+              title="Info"
+              color="#fff"
+            />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="detail"
+        component={profile_detail}
+        options={{
+          title: 'My home',
+          headerStyle: {
+            backgroundColor: '#2a5724',
+          },
+
+          headerTintColor: '#fff',
+          headerRight: () => (
+            <Button
+              onPress={() => alert('This is First Page !')}
               title="Info"
               color="#fff"
             />
@@ -76,4 +117,3 @@ const app = () => {
   );
 };
 export default app;
-// hello

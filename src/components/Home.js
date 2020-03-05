@@ -14,6 +14,7 @@ class Home1 extends React.Component {
     return (
       <SafeAreaView style={styles.container}>
         <Text style={{marginTop: 20, fontSize: 20}}>{this.state.userName}</Text>
+        
         <TextInput
           style={[styles.text_input]}
           onChangeText={userName => this.setState({userName})}

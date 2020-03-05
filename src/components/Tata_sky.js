@@ -26,6 +26,8 @@ class Test extends React.Component {
             <Text style={[styles.r999]}>₹999 </Text>
             <View style={styles.line} />
             <View style={styles.botton}>
+
+              
                 <TouchableOpacity onPress={()=>{navigation.navigate('Touch_image')}}>
               <Text style={styles.proceed}>Proceed to Payment</Text>
               </TouchableOpacity>

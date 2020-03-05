@@ -7,9 +7,9 @@ import {
   Image,
   SafeAreaView,
   Button,
-  TouchableOpacity,
   Alert,
 } from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
 class Home extends React.Component {
   // constructor(prop){
@@ -37,7 +37,7 @@ class Home extends React.Component {
     }
   };
   render() {
-  
+    const {navigation} = this.props;
     return (
       <SafeAreaView style={[styles.container]}>
         <View
@@ -75,9 +75,15 @@ class Home extends React.Component {
           <View style={styles.child2}>
             <Text style={styles.helo}>Hello</Text>
           </View>
-          <TouchableOpacity onPress={() => this.check(5)}>
+
+
+
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('profile');
+            }}>
             <View style={styles.child2}>
-              <Button style={styles.btn} title="button" />
+              <Button style={styles.btn} title="Profiles" />
             </View>
           </TouchableOpacity>
           <View style={styles.child2}>

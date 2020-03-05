@@ -22,12 +22,16 @@ class Home1 extends React.Component {
       <SafeAreaView style={styles.container}>
         <View style={[styles.profiles, {flexDirection: 'row'}]}>
           <View style={styles.imag}>
-          <View style={styles.imag}>
+            <View style={styles.imag}>
               <TouchableOpacity
                 onPress={() => {
-                  navigation.navigate('detail', {
-                    keyes: require('./assets/download.jpeg'),
-                  },{keyes2:"ankit"});
+                  navigation.navigate(
+                    'detail',
+                    {
+                      keyes: require('./assets/download.jpeg'),
+                    },
+                    {keyes2: ankit},
+                  );
                 }}>
                 <Image
                   style={{width: 100, height: 100}}
@@ -56,7 +60,7 @@ class Home1 extends React.Component {
               </TouchableOpacity>
             </View>
             <View style={styles.name}>
-              <Text>Ankit</Text>
+              <Text>Reema</Text>
             </View>
           </View>
         </View>
@@ -76,7 +80,7 @@ class Home1 extends React.Component {
               </TouchableOpacity>
             </View>
             <View style={styles.name}>
-              <Text>Ankit</Text>
+              <Text>mohit</Text>
             </View>
           </View>
         </View>
@@ -96,7 +100,7 @@ class Home1 extends React.Component {
               </TouchableOpacity>
             </View>
             <View style={styles.name}>
-              <Text>Ankit</Text>
+              <Text>sumit</Text>
             </View>
           </View>
         </View>

@@ -18,7 +18,8 @@ class Home1 extends React.Component {
   }
   render() {
     const {navigation, route} = this.props;
-    const {keyes, keyes2} = route.params;
+    const {keyes} = route.params;
+    const {keyes2} = route.params;
     return (
       <SafeAreaView style={styles.container}>
         <View style={[styles.img, {justifyContent: 'center'}]}>

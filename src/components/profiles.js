@@ -29,8 +29,8 @@ class Home1 extends React.Component {
                     'detail',
                     {
                       keyes: require('./assets/download.jpeg'),
-                    },
-                    {keyes2: ankit},
+                    
+                    keyes2: 'Ankit'},
                   );
                 }}>
                 <Image
@@ -50,7 +50,7 @@ class Home1 extends React.Component {
               <TouchableOpacity
                 onPress={() => {
                   navigation.navigate('detail', {
-                    keyes: require('./assets/profile.jpg'),
+                    keyes: require('./assets/profile.jpg'),keyes:'Reema'
                   });
                 }}>
                 <Image
@@ -70,7 +70,7 @@ class Home1 extends React.Component {
               <TouchableOpacity
                 onPress={() => {
                   navigation.navigate('detail', {
-                    keyes: require('./assets/profile2.jpg'),
+                    keyes: require('./assets/profile2.jpg'),keyes2:'Maohit'
                   });
                 }}>
                 <Image
@@ -90,7 +90,7 @@ class Home1 extends React.Component {
               <TouchableOpacity
                 onPress={() => {
                   navigation.navigate('detail', {
-                    keyes: require('./assets/profile3.jpg'),
+                    keyes: require('./assets/profile3.jpg'),keyes2:'Sumit'
                   });
                 }}>
                 <Image

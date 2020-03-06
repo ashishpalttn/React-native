@@ -56,11 +56,7 @@ const styles = StyleSheet.create({
     margin:20
   },
 });
-navigationOptions = {
-  headerStyle: {
-    backgroundColor: 'red',
-  },
-}
+
 
 
 export default Home1;

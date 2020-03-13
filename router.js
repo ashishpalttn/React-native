@@ -4,6 +4,7 @@ import Touch_image from './src/components/Touch_image';
 import profiles from './src/components/profiles';
 import profile_detail from './src/components/profile_detail';
 import sectionList from './src/components/sectionList';
+import alert from './src/components/alert';
 import * as React from 'react';
 import {NavigationContainer, StackActions} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -109,6 +110,25 @@ const MyStack = () => {
       <Stack.Screen
         name="sectionList"
         component={sectionList}
+        options={{
+          title: 'My home',
+          headerStyle: {
+            backgroundColor: '#2a5724',
+          },
+
+          headerTintColor: '#fff',
+          headerRight: () => (
+            <Button
+              onPress={() => alert('This is First Page !')}
+              title="Info"
+              color="#fff"
+            />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="alert"
+        component={alert}
         options={{
           title: 'My home',
           headerStyle: {

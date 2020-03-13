@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, TextInput, Text, StyleSheet, SafeAreaView} from 'react-native';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {View, TextInput, Text, StyleSheet, SafeAreaView,TouchableOpacity} from 'react-native';
+// import {TouchableOpacity} from 'react-native-gesture-handler';
 class Home1 extends React.Component {
   constructor() {
     super();
@@ -33,6 +33,13 @@ class Home1 extends React.Component {
           }}>
           <Text style={styles.tata_sky}>Go to Tata Sky</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => {
+            navigation.navigate('alert');
+          }}>
+          <Text style={styles.tata_sky}>Hello alert</Text>
+        </TouchableOpacity>
+        
       </SafeAreaView>
     );
   }

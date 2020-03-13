@@ -34,7 +34,7 @@ function Item({title}) {
     
     return (
       <View style={styles.item}>
-        <Text style={styles.title}>{title.category_No}</Text>
+        {/* <Text style={styles.title}>{title.category_No}</Text> */}
         <Text style={styles.title}>{title.name}</Text>
        
         <Text style={styles.title}>{title.quantity}</Text>

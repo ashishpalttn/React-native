@@ -25,13 +25,11 @@ class Home1 extends React.Component {
             <View style={styles.imag}>
               <TouchableOpacity
                 onPress={() => {
-                  navigation.navigate(
-                    'detail',
-                    {
-                      keyes: require('./assets/download.jpeg'),
-                    
-                    keyes2: 'Ankit'},
-                  );
+                  navigation.navigate('detail', {
+                    keyes: require('./assets/download.jpeg'),
+
+                    keyes2: 'Ankit',
+                  });
                 }}>
                 <Image
                   style={{width: 100, height: 100}}
@@ -50,7 +48,8 @@ class Home1 extends React.Component {
               <TouchableOpacity
                 onPress={() => {
                   navigation.navigate('detail', {
-                    keyes: require('./assets/profile.jpg'),keyes:'Reema'
+                    keyes: require('./assets/profile.jpg'),
+                    keyes: 'Reema',
                   });
                 }}>
                 <Image
@@ -70,7 +69,8 @@ class Home1 extends React.Component {
               <TouchableOpacity
                 onPress={() => {
                   navigation.navigate('detail', {
-                    keyes: require('./assets/profile2.jpg'),keyes2:'Maohit'
+                    keyes: require('./assets/profile2.jpg'),
+                    keyes2: 'Maohit',
                   });
                 }}>
                 <Image
@@ -90,7 +90,8 @@ class Home1 extends React.Component {
               <TouchableOpacity
                 onPress={() => {
                   navigation.navigate('detail', {
-                    keyes: require('./assets/profile3.jpg'),keyes2:'Sumit'
+                    keyes: require('./assets/profile3.jpg'),
+                    keyes2: 'Sumit',
                   });
                 }}>
                 <Image
@@ -102,6 +103,22 @@ class Home1 extends React.Component {
             <View style={styles.name}>
               <Text>sumit</Text>
             </View>
+          </View>
+        </View>
+
+        <View style={[styles.profiles, {backgroundColor: 'red'}]}>
+          <View style={[styles.profiles, {flexDirection: 'row'}]}>
+            <View style={styles.imag}>
+              <TouchableOpacity
+                onPress={() => {
+                  navigation.navigate('sectionList')
+                }}>
+                 <View style={styles.name}>
+              <Text>SectionList</Text>
+            </View>
+              </TouchableOpacity>
+            </View>
+            
           </View>
         </View>
       </SafeAreaView>

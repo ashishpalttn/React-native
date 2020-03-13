@@ -52,11 +52,14 @@ class Test extends React.Component {
             
             
           </View>
+            
+            
+          </View>
           <View style={[styles.children2,{backgroundColor:"white"},{flex: 0.49}]} >
        
           </View>
         </View>
-      </View>
+      
     );
   }
 }

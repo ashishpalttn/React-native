@@ -29,8 +29,8 @@ render(){
                     <TouchableOpacity onPress={()=>{navigation.navigate('modal')}}>
                     <View style={styles.button_view}><Text style={styles.button}>Modal</Text></View>                    
                     </TouchableOpacity>
-                    <TouchableOpacity >
-                    <View style={styles.button_view}><Text style={styles.button}>Hello</Text></View>                    
+                    <TouchableOpacity onPress={()=>{navigation.navigate('api_fetch')}}>
+                    <View style={styles.button_view}><Text style={styles.button}>Api fetch</Text></View>                    
                     </TouchableOpacity>
                     <TouchableOpacity >
                     <View style={styles.button_view}><Text style={styles.button}>Hello</Text></View>                    

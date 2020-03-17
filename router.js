@@ -1,3 +1,4 @@
+import main from './src/components/main'
 import Home from './src/components/Home';
 import Tata_sky from './src/components/Tata_sky';
 import Touch_image from './src/components/Touch_image';
@@ -5,6 +6,8 @@ import profiles from './src/components/profiles';
 import profile_detail from './src/components/profile_detail';
 import sectionList from './src/components/sectionList';
 import alert from './src/components/alert';
+import modal from './src/components/modal';
+import api from './src/components/api_fetch'
 import * as React from 'react';
 import {NavigationContainer, StackActions} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -15,12 +18,12 @@ const MyStack = () => {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Home"
-        component={Home}
+        name="main"
+        component={main}
         options={{
-          title: 'My home',
+          title: 'Main',
           headerStyle: {
-            backgroundColor: '#2a5724',
+            backgroundColor: '#2102bf',
           },
 
           headerTintColor: '#fff',
@@ -33,6 +36,177 @@ const MyStack = () => {
           ),
         }}
       />
+                                <Stack.Screen
+                                  name="Home"
+                                  component={Home}
+                                  options={{
+                                    title: 'Home',
+                                    headerStyle: {
+                                      backgroundColor: '#2a5724',
+                                    },
+
+                                    headerTintColor: '#fff',
+                                    headerRight: () => (
+                                      <Button
+                                        onPress={() => alert('This is First Page !')}
+                                        title="Info"
+                                        color="#fff"
+                                      />
+                                    ),
+                                  }}
+                                />
+                               <Stack.Screen
+                                  name="tata_sky"
+                                  component={Tata_sky}
+                                  options={{
+                                    title: 'Tata Sky',
+                                    headerStyle: {
+                                      backgroundColor: '#2a5724',
+                                    },
+
+                                    headerTintColor: '#fff',
+                                    headerRight: () => (
+                                      <Button
+                                        onPress={() => alert('This is First Page !')}
+                                        title="Info"
+                                        color="#fff"
+                                      />
+                                    ),
+                                  }}
+                                />
+                                <Stack.Screen
+                                  name="image"
+                                  component={Touch_image}
+                                  options={{
+                                    title: 'Touch Image',
+                                    headerStyle: {
+                                      backgroundColor: '#2a5724',
+                                    },
+
+                                    headerTintColor: '#fff',
+                                    headerRight: () => (
+                                      <Button
+                                        onPress={() => alert('This is First Page !')}
+                                        title="Info"
+                                        color="#fff"
+                                      />
+                                    ),
+                                  }}
+                                />
+                                <Stack.Screen
+                                  name="pass_value"
+                                  component={profiles}
+                                  options={{
+                                    title: 'profiles',
+                                    headerStyle: {
+                                      backgroundColor: '#2a5724',
+                                    },
+
+                                    headerTintColor: '#fff',
+                                    headerRight: () => (
+                                      <Button
+                                        onPress={() => alert('This is First Page !')}
+                                        title="Info"
+                                        color="#fff"
+                                      />
+                                    ),
+                                  }}
+                                />
+                                <Stack.Screen
+                                  name="section_list"
+                                  component={sectionList}
+                                  options={{
+                                    title: 'Section List',
+                                    headerStyle: {
+                                      backgroundColor: '#2a5724',
+                                    },
+
+                                    headerTintColor: '#fff',
+                                    headerRight: () => (
+                                      <Button
+                                        onPress={() => alert('This is First Page !')}
+                                        title="Info"
+                                        color="#fff"
+                                      />
+                                    ),
+                                  }}
+                                />
+                                <Stack.Screen
+                                  name="alert_box"
+                                  component={alert}
+                                  options={{
+                                    title: 'Alert',
+                                    headerStyle: {
+                                      backgroundColor: '#2a5724',
+                                    },
+
+                                    headerTintColor: '#fff',
+                                    headerRight: () => (
+                                      <Button
+                                        onPress={() => alert('This is First Page !')}
+                                        title="Info"
+                                        color="#fff"
+                                      />
+                                    ),
+                                  }}
+                                />
+                                                        <Stack.Screen
+                                                          name="next"
+                                                          component={profiles}
+                                                          options={{
+                                                            title: 'Alert',
+                                                            headerStyle: {
+                                                              backgroundColor: '#2a5724',
+                                                            },
+
+                                                            headerTintColor: '#fff',
+                                                            headerRight: () => (
+                                                              <Button
+                                                                onPress={() => alert('This is First Page !')}
+                                                                title="Info"
+                                                                color="#fff"
+                                                              />
+                                                            ),
+                                                          }}
+                                                        />
+                                  <Stack.Screen
+                                  name="modal"
+                                  component={modal}
+                                  options={{
+                                    title: 'Alert',
+                                    headerStyle: {
+                                      backgroundColor: '#2a5724',
+                                    },
+
+                                    headerTintColor: '#fff',
+                                    headerRight: () => (
+                                      <Button
+                                        onPress={() => alert('This is First Page !')}
+                                        title="Info"
+                                        color="#fff"
+                                      />
+                                    ),
+                                  }}
+                                />
+                                 <Stack.Screen
+                                  name="api_fetch"
+                                  component={api}
+                                  options={{
+                                    title: 'Api-Fetch',
+                                    headerStyle: {
+                                      backgroundColor: '#2a5724',
+                                    },
+
+                                    headerTintColor: '#fff',
+                                    headerRight: () => (
+                                      <Button
+                                        onPress={() => alert('This is First Page !')}
+                                        title="Info"
+                                        color="#fff"
+                                      />
+                                    ),
+                                  }}
+                                />
       <Stack.Screen
         name="Tata_sky"
         component={Tata_sky}

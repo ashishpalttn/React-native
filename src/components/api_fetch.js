@@ -1,7 +1,5 @@
 import React from 'react';
 import {StyleSheet, Text, SafeAreaView,SectionList, ActivityIndicator,View} from 'react-native';
-
-
 class SectionHeader extends React.Component {
   constructor() {
     super();
@@ -10,46 +8,50 @@ class SectionHeader extends React.Component {
 componentDidMount(){
     fetch('https://api.myjson.com/bins/oylfu')
 .then((response) => {
-  // this.setState({isLoading:false})
 return response.json();
-
-
 })
 .then((data) => {
-
     new_data =[]
     data.forEach(item=>{
     var list={}
     list.title=item.primaryCategory.categoryName
     list.data=[]
-    list.data.push(item.volume)
-    list.data.push(item.productName)
-    list.data.push(item.price)
-    list.data.push(item.measurementUnit.unitId)
+    obj={volume:item.volume}
+    // list.data.push(item.volume)
+    // list.data.push(item.productName)
+    // list.data.push(item.price)
+    // list.data.push(item.measurementUnit.unitId)
+    list.data.push(obj)
+    obj={Name:item.productName}
+    list.data.push(obj)
+    obj={price:item.price}
+    list.data.push(obj)
+    obj={unitId:item.measurementUnit.unitId}
+    list.data.push(obj)
     new_data.push(list)
 })
       this.setState({newDB:new_data})
       this.setState({isLoading:false})
-    //  console.log(new_data)
-     
 });
 }
-
-    
     Item({title}) {
-      
-        return (
+      console.log(title)
+              return (
         <View style={styles.item}>
-            {/* <Text style={styles.title}>{title.category_No}</Text> */}
-            <Text style={styles.title}>{title}</Text>
-{/*         
-            <Text style={styles.title}>{title.productN}</Text> */}
+            {/* <Text style={styles.title}>{title.category_No}</Text> */} 
+            <Text style={styles.title}>{Object.keys(title)[0]}</Text>
+            <Text style={styles.title}>{Object.values(title)[0]}</Text>
+            {/* <Text style={styles.title}>{title.Name}</Text>
+            <Text style={styles.title}>{title.price}</Text>
+            <Text style={styles.title}>{title.unitId}</Text> */}
+        
+            
 
         </View>
         );
     }
   render() {
-    console.log(this.state.newDB)
+    // console.log(this.state.newDB)
     if(this.state.isLoading)
     return(
       <SafeAreaView style={{flex:1,backgroundColor:"green"}}>

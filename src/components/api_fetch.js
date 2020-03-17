@@ -41,9 +41,9 @@ return response.json();
         return (
         <View style={styles.item}>
             {/* <Text style={styles.title}>{title.category_No}</Text> */}
-            <Text style={styles.title}>{title.volume}</Text>
-        
-            <Text style={styles.title}>{title.productName}</Text>
+            <Text style={styles.title}>{title}</Text>
+{/*         
+            <Text style={styles.title}>{title.productN}</Text> */}
 
         </View>
         );

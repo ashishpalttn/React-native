@@ -1,13 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, SafeAreaView,SectionList,View} from 'react-native';
 
-
-class SectionHeader extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  componentDidMount(){
-    arrayObj=[{category_No:1,name:"mohit",quantity:5},
+arrayObj=[{category_No:1,name:"mohit",quantity:5},
     {category_No:1,name:"sobit",quantity:6},
     {category_No:1,name:"molly",quantity:2},
     {category_No:2,name:"toffey",quantity:9},
@@ -34,7 +28,11 @@ list.data.push(arr_item)
 update_data.push(list)
 })
 console.log(update_data)
+class SectionHeader extends React.Component {
+  constructor(props) {
+    super(props);
   }
+
   Item({title}) {
     
     return (
@@ -47,7 +45,6 @@ console.log(update_data)
       </View>
     );
 }
-
   render() {
     // const {update_data}=this.state
     console.log(update_data)

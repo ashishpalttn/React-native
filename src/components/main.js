@@ -32,6 +32,15 @@ render(){
                     <TouchableOpacity onPress={()=>{navigation.navigate('api_fetch')}}>
                     <View style={styles.button_view}><Text style={styles.button}>Api fetch</Text></View>                    
                     </TouchableOpacity>
+                    <TouchableOpacity onPress={()=>{navigation.navigate('tab')}}>
+                    <View style={styles.button_view}><Text style={styles.button}>tab</Text></View>                    
+                    </TouchableOpacity>
+                    <TouchableOpacity >
+                    <View style={styles.button_view}><Text style={styles.button}>Hello</Text></View>                    
+                    </TouchableOpacity>
+                    <TouchableOpacity >
+                    <View style={styles.button_view}><Text style={styles.button}>Hello</Text></View>                    
+                    </TouchableOpacity>
                     <TouchableOpacity >
                     <View style={styles.button_view}><Text style={styles.button}>Hello</Text></View>                    
                     </TouchableOpacity>

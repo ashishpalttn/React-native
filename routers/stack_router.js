@@ -1,20 +1,28 @@
-import main from './src/components/main'
-import Home from './src/components/Home';
-import Tata_sky from './src/components/Tata_sky';
-import Touch_image from './src/components/Touch_image';
-import profiles from './src/components/profiles';
-import profile_detail from './src/components/profile_detail';
-import sectionList from './src/components/sectionList';
-import alert from './src/components/alert';
-import modal from './src/components/modal';
-import api from './src/components/api_fetch'
+import main from '../src/components/main'
+import Home from '../src/components/Home';
+import Tata_sky from '../src/components/Tata_sky';
+import Touch_image from '../src/components/Touch_image';
+import profiles from '../src/components/profiles';
+import profile_detail from '../src/components/profile_detail';
+import sectionList from '../src/components/sectionList';
+import alert from '../src/components/alert';
+import modal from '../src/components/modal';
+import api from '../src/components/api_fetch'
+import tab from '../src/components/tab_navigation'
 import * as React from 'react';
 import {NavigationContainer, StackActions} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {Button, LogoTitle} from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+const Mtab = createMaterialBottomTabNavigator();
+const Drawer=createDrawerNavigator()
 
-const MyStack = () => {
+
+function MyStack () {
   return (
     <Stack.Navigator>
       <Stack.Screen
@@ -207,6 +215,25 @@ const MyStack = () => {
                                     ),
                                   }}
                                 />
+                                 <Stack.Screen
+                                  name="tab"
+                                  component={tab}
+                                  options={{
+                                    title: 'Api-Fetch',
+                                    headerStyle: {
+                                      backgroundColor: '#2a5724',
+                                    },
+
+                                    headerTintColor: '#fff',
+                                    headerRight: () => (
+                                      <Button
+                                        onPress={() => alert('This is First Page !')}
+                                        title="Info"
+                                        color="#fff"
+                                      />
+                                    ),
+                                  }}
+                                />
       <Stack.Screen
         name="Tata_sky"
         component={Tata_sky}
@@ -322,11 +349,22 @@ const MyStack = () => {
     </Stack.Navigator>
   );
 };
-
-const app = () => {
+function tabnab(){
+      return(
+        <Mtab.Navigator>
+          <Mtab.Screen name="Home" component={MyStack} />
+          <Mtab.Screen name="Settings" component={Tata_sky} />
+          <Mtab.Screen name="Screen" component={Touch_image} />
+        </Mtab.Navigator>
+      )
+}
+function app() {
   return (
     <NavigationContainer>
-      <MyStack />
+       <Drawer.Navigator>
+      <Drawer.Screen name="Feed" component={tabnab} />
+      <Drawer.Screen name="Article" component={profiles} />
+    </Drawer.Navigator>
     </NavigationContainer>
   );
 };

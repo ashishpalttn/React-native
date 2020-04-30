@@ -35,7 +35,7 @@ class RealmClass extends React.Component {
     const info = this.state.realm
     ? ' Stored Data : ' + this.state.realm.objects('Dog')[0].name
     : 'Loading...';
-    return (
+    return (  
       <SafeAreaView style={styles.container}>
         <View style={styles.topView}>
           <Text>{info}</Text>

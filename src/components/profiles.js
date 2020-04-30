@@ -27,7 +27,6 @@ class Home1 extends React.Component {
                 onPress={() => {
                   navigation.navigate('detail', {
                     keyes: require('./assets/download.jpeg'),
-
                     keyes2: 'Ankit',
                   });
                 }}>

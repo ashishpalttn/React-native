@@ -7,7 +7,7 @@ class SectionHeader extends React.Component {
   }
 componentDidMount(){
     fetch('https://api.myjson.com/bins/oylfu')
-.then((response) => {
+    .then((response) => {
 return response.json();
 })
 .then((data) => {

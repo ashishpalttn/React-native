@@ -8,7 +8,9 @@ import sectionList from '../src/components/sectionList';
 import alert from '../src/components/alert';
 import modal from '../src/components/modal';
 import api from '../src/components/api_fetch'
-import tab from '../src/components/tab_navigation'
+import Animation from '../src/components/Animation'
+import Realm from '../src/components/Realm'
+import tab from '../src/components/scroll_view'
 import * as React from 'react';
 import {NavigationContainer, StackActions} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
@@ -16,6 +18,7 @@ import {Button, LogoTitle} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { MaterialCommunityIcons } from 'react-native-vector-icons';
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 const Mtab = createMaterialBottomTabNavigator();
@@ -24,7 +27,7 @@ const Drawer=createDrawerNavigator()
 
 function MyStack () {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator >
       <Stack.Screen
         name="main"
         component={main}
@@ -346,13 +349,53 @@ function MyStack () {
           ),
         }}
       />
+       <Stack.Screen
+        name="Animation"
+        component={Animation}
+        options={{
+          title: 'My home',
+          headerStyle: {
+            backgroundColor: '#2a5724',
+          },
+
+          headerTintColor: '#fff',
+          headerRight: () => (
+            <Button
+              onPress={() => alert('This is First Page !')}
+              title="Info"
+              color="#fff"
+            />
+          ),
+        }}
+      />
+      <Stack.Screen
+        name="Realm"
+        component={Realm}
+        options={{
+          title: 'My home',
+          headerStyle: {
+            backgroundColor: '#2a5724',
+          },
+
+          headerTintColor: '#fff',
+          headerRight: () => (
+            <Button
+              onPress={() => alert('This is First Page !')}
+              title="Info"
+              color="#fff"
+            />
+          ),
+        }}
+      />
     </Stack.Navigator>
   );
 };
 function tabnab(){
       return(
-        <Mtab.Navigator>
-          <Mtab.Screen name="Home" component={MyStack} />
+        <Mtab.Navigator activeColor='red' style={{backgroundColor:'yellow'}}>
+          <Mtab.Screen name="Home" component={MyStack} 
+         
+          />
           <Mtab.Screen name="Settings" component={Tata_sky} />
           <Mtab.Screen name="Screen" component={Touch_image} />
         </Mtab.Navigator>

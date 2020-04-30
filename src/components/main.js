@@ -8,7 +8,7 @@ render(){
             <View style={styles.scroll_view}>
                 <Text style={{alignSelf:'center',fontSize:50,marginTop:30,justifyContent:"center",color:"blue"}}>Welcome</Text>
                 <ScrollView contentContainerStyle={{alignItems:"center"}}>
-                    <TouchableOpacity onPress={()=>{navigation.navigate('Home')}}>
+                    <TouchableOpacity underlaycolor='red' onPress={()=>{navigation.navigate('Home')}}>
                     <View style={styles.button_view}><Text style={styles.button}>Home </Text></View>                    
                     </TouchableOpacity>
                     <TouchableOpacity onPress={()=>{navigation.navigate('tata_sky')}}>
@@ -33,13 +33,13 @@ render(){
                     <View style={styles.button_view}><Text style={styles.button}>Api fetch</Text></View>                    
                     </TouchableOpacity>
                     <TouchableOpacity onPress={()=>{navigation.navigate('tab')}}>
-                    <View style={styles.button_view}><Text style={styles.button}>tab</Text></View>                    
+                    <View style={styles.button_view}><Text style={styles.button}>Scroll_view</Text></View>                    
                     </TouchableOpacity>
-                    <TouchableOpacity >
-                    <View style={styles.button_view}><Text style={styles.button}>Hello</Text></View>                    
+                    <TouchableOpacity onPress ={()=>navigation.navigate('Realm')}>
+                    <View style={styles.button_view}><Text style={styles.button}>Realm</Text></View>                    
                     </TouchableOpacity>
-                    <TouchableOpacity >
-                    <View style={styles.button_view}><Text style={styles.button}>Hello</Text></View>                    
+                    <TouchableOpacity onPress={()=>navigation.navigate('Animation')}>
+                    <View style={styles.button_view}><Text style={styles.button}>Animatiom</Text></View>                    
                     </TouchableOpacity>
                     <TouchableOpacity >
                     <View style={styles.button_view}><Text style={styles.button}>Hello</Text></View>                    
@@ -70,7 +70,12 @@ const styles=StyleSheet.create({
         borderRadius:20,
         paddingHorizontal:15,
         marginVertical:10,
-        backgroundColor:"blue"},
+        backgroundColor:"blue",
+        shadowOpacity:10,
+        shadowRadius:4,
+        
+
+    },
     
     button:{
         // width:'80%'

@@ -27,7 +27,7 @@ list.data.push(arr_item)
 })
 update_data.push(list)
 })
-console.log(update_data)
+// console.log(update_data)
 class SectionHeader extends React.Component {
   constructor(props) {
     super(props);
